@@ -82,6 +82,9 @@ const App = () => {
       break;
   }
 
+  // date object
+  const date = new Date();
+
   return (
     <div className='w-full h-screen bg-gradientBg
     bg-no-repeat bg-cover bg-center flex flex-col
@@ -94,7 +97,18 @@ const App = () => {
       rounded-[32px] py-12 px-6'>
         <div>
           {/* card top */}
-          <div>card top</div>
+          <div className='flex items-center gap-x-5'>
+            {/* icon */}
+            <div className='text-[87px]'>{icon}</div>
+            <div>
+              {/* country name */}
+              <div className='text-2xl font-semibold'>
+                {data.name}, {data.sys.country}
+              </div>
+              {/* date */}
+              <div>{date.getUTCDate()}/{date.getUTCMonth() + 1}/{date.getUTCFullYear()}</div>
+            </div>
+          </div>
           {/* card body */}
           <div>card body</div>
           {/* card bottom */}
