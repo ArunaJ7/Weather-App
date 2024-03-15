@@ -89,7 +89,9 @@ const App = () => {
       {/* form */}
       <form>form</form>
       {/* card */}
-      <div>
+      <div className='w-full max-w-[450px] bg-black/20
+      min-h-[584px] text-white backdrop-blur-[32px]
+      rounded-[32px] py-12 px-6'>
         <div>
           {/* card top */}
           <div>card top</div>
