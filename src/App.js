@@ -83,7 +83,9 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className='w-full h-screen bg-gradientBg
+    bg-no-repeat bg-cover bg-center flex flex-col
+    items-center justify-center px-4 lg:px-0'>
       {/* form */}
       <form>form</form>
       {/* card */}
