@@ -113,7 +113,13 @@ const App = () => {
           <div className='my-20'>
             <div>
               {/* temp */}
-              <div className='text-[144px]'>{parseInt(data.main.temp)}</div>
+              <div className='text-[144px] leading-none font-light'>
+                {parseInt(data.main.temp)}
+              </div>
+              {/* celsius icon */}
+              <div className='text-4xl'>
+                <TbTemperatureCelsius />
+              </div>
             </div>
           </div>
           {/* card bottom */}
