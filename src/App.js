@@ -35,7 +35,7 @@ const App = () => {
 
   // fetch the data
   useEffect(()=> {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIkey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${APIkey}`;
 
     axios.get(url).then(res => {
       setData(res.data);
@@ -110,7 +110,12 @@ const App = () => {
             </div>
           </div>
           {/* card body */}
-          <div>card body</div>
+          <div className='my-20'>
+            <div>
+              {/* temp */}
+              <div className='text-[144px]'>{parseInt(data.main.temp)}</div>
+            </div>
+          </div>
           {/* card bottom */}
           <div>card bottom</div>
         </div>
