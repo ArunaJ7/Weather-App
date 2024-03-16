@@ -111,7 +111,7 @@ const App = () => {
           </div>
           {/* card body */}
           <div className='my-20'>
-            <div>
+            <div className='flex justify-center items-center'>
               {/* temp */}
               <div className='text-[144px] leading-none font-light'>
                 {parseInt(data.main.temp)}
