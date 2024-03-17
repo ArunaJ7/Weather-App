@@ -41,6 +41,20 @@ const App = () => {
 
   const handleSubmit = (e) => {
     console.log(inputValue);
+    //if input values not empty
+    if (inputValue !== ''){
+      //set location
+      setLocation(inputValue);
+    }
+
+    //select input
+    const input = document.querySelector('input');
+
+    //clear input
+    input.value='';
+
+    // prevent default
+    e.preventDefault();
   }
 
   // fetch the data
@@ -109,7 +123,7 @@ const App = () => {
             text-white text-[15px] font-light pl-6 h-full' 
             type='text' placeholder='Search by or country'
           />
-          <button className='bg-[#1ab8ed] hover:bg-[#15abdd] w-20 h-12 rounded-full flex justify-center items-center transition'><IoMdSearch className='text-2xl text-white'/></button>
+          <button onClick={(e) => handleSubmit(e)} className='bg-[#1ab8ed] hover:bg-[#15abdd] w-20 h-12 rounded-full flex justify-center items-center transition'><IoMdSearch className='text-2xl text-white'/></button>
         </div>
       </form>
       {/* card */}
