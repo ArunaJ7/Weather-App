@@ -30,8 +30,18 @@ import { ImSpinner8} from 'react-icons/im';
 const APIkey = 'c096698d8315f53e530941dd7eb03999'
 
 const App = () => {
+
   const [data, setData] = useState(null);
   const [location, setLocation] = useState('Bucharest');
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInput = (e) => {
+    setInputValue(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    console.log(inputValue);
+  }
 
   // fetch the data
   useEffect(()=> {
@@ -86,11 +96,22 @@ const App = () => {
   const date = new Date();
 
   return (
+
     <div className='w-full h-screen bg-gradientBg
     bg-no-repeat bg-cover bg-center flex flex-col
     items-center justify-center px-4 lg:px-0'>
       {/* form */}
-      <form>form</form>
+      <form className='h-16 bg-black/30 w-full max-w-[450px] rounded-full backdrop-blur-[32px] mb-8'>
+        <div className='h-full relative flex items-center justify-between p-2'>
+          <input
+            onChange={(e) => handleInput(e)} 
+            className='flex-1 bg-transparent outline-none placeholder:text-white 
+            text-white text-[15px] font-light pl-6 h-full' 
+            type='text' placeholder='Search by or country'
+          />
+          <button className='bg-[#1ab8ed] hover:bg-[#15abdd] w-20 h-12 rounded-full flex justify-center items-center transition'><IoMdSearch className='text-2xl text-white'/></button>
+        </div>
+      </form>
       {/* card */}
       <div className='w-full max-w-[450px] bg-black/20
       min-h-[584px] text-white backdrop-blur-[32px]
