@@ -19,8 +19,7 @@ import {
   BsEye,
   BsWater,
   BsThermometer,
-  BsWind,
-  BsSnow
+  BsWind
 } from 'react-icons/bs';
 
 import { TbTemperatureCelsius} from 'react-icons/tb';
@@ -114,8 +113,6 @@ const App = () => {
 
   // set the icon according to the weather
   let icon;
-  console.log(data.weather[0].main);
-
 
   switch (data.weather[0].main) {
     case 'Clouds':
@@ -125,19 +122,19 @@ const App = () => {
       icon = <BsCloudHaze2Fill />;
       break;
     case 'Rain':
-      icon = <IoMdRainy />;
+      icon = <IoMdRainy className='text-[#31cafb]'/>;
       break;
     case 'Clear':
-      icon = <IoMdSunny />;
+      icon = <IoMdSunny className='text-[#ffde33]' />;
       break;
     case 'Drizzle':
-      icon = <BsCloudDrizzleFill />;
+      icon = <BsCloudDrizzleFill className='text-[#31cafb]'/>;
       break;
     case 'Snow':
-      icon = <IoMdSnow />;
+      icon = <IoMdSnow className='text-[#31cafb]'/>;
       break;
     case 'Thunderstorm':
-      icon = <IoMdThunderstorm />;
+      icon = <IoMdThunderstorm className='text-[#808080]'/>;
       break;
   }
 
