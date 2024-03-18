@@ -80,7 +80,7 @@ const App = () => {
     axios.get(url).then((res) => {
       //set the data after 1500ms
       setTimeout(()=>{
-        // setData(res.data);
+        setData(res.data);
         //set loading to false
         setLoading(false);
       }, 1500);
@@ -103,9 +103,10 @@ const App = () => {
   // if data is false show the loader
   if (!data) {
     return (
-      <div>
+      <div className='w-full h-screen bg-gradientBg bg-no-repeat bg-cover
+      bg-center flex flex-col justify-center items-center'>
         <div>
-          <ImSpinner8 className='text-5xl animate-spin' />
+          <ImSpinner8 className='text-5xl animate-spin text-white' />
         </div>
       </div>
     )
