@@ -163,7 +163,7 @@ const App = () => {
             onChange={(e) => handleInput(e)} 
             className='flex-1 bg-transparent outline-none placeholder:text-white 
             text-white text-[15px] font-light pl-6 h-full' 
-            type='text' placeholder='Search by or country'
+            type='text' placeholder='Search by city or country'
           />
           <button 
             onClick={(e) => handleSubmit(e)} 
