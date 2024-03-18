@@ -31,11 +31,13 @@ const APIkey = 'c096698d8315f53e530941dd7eb03999'
 const App = () => {
 
   const [data, setData] = useState(null);
-  const [location, setLocation] = useState('Bucharest');
+  const [location, setLocation] = useState('Colombo');
   const [inputValue, setInputValue] = useState('');
   const [animate, setAnimate] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState();
+
+
 
   const handleInput = (e) => {
     setInputValue(e.target.value);
