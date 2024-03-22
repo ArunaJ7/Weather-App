@@ -1,4 +1,5 @@
-# weather-app-starter
+# weather-app
 
-check weather by search 
-display current location weather
+check live weather </br>
+user can search location </br> 
+use openweather api
